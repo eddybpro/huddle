@@ -121,6 +121,10 @@ ul > li > a:hover {
 }
 
 @media screen and (min-width: 700px) {
+  footer {
+    padding: 12rem 4rem 4rem;
+  }
+
   .FooterWrapper {
     display: grid;
     grid-template-columns: repeat(2, 1fr);

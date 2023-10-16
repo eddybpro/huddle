@@ -75,13 +75,12 @@ header {
 
 @media screen and (min-width: 700px) {
   header {
-    padding: 3rem 2rem;
+    padding: 3rem 4rem;
     background: url("../assets/bg-hero-desktop.svg");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     background-color: var(--color-site-1);
-    text-align: center;
   }
 
   .HeaderWrapper {
