@@ -51,7 +51,7 @@ function Footer() {
         </ul>
         <ul className="FooterWrapper-SocialIcons">
           <li>
-            <a href="#">
+            <a href="#" aria-label="facebook">
               <IconContext.Provider value={{ className: "socialIcon" }}>
                 <div>
                   <FaFacebookF />
@@ -60,7 +60,7 @@ function Footer() {
             </a>
           </li>
           <li>
-            <a href="#">
+            <a href="#" aria-label="twitter">
               <IconContext.Provider value={{ className: "socialIcon" }}>
                 <div>
                   <FaTwitter />
@@ -69,7 +69,7 @@ function Footer() {
             </a>
           </li>
           <li>
-            <a href="#">
+            <a href="#" aria-label="instagram">
               <IconContext.Provider value={{ className: "socialIcon" }}>
                 <div>
                   <FaInstagram />
