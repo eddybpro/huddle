@@ -1,0 +1,87 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Poppins:wght@600&display=swap");
+
+:root {
+  --color-brand-1: hsl(192, 100%, 9%);
+  --color-brand-2: hsl(208, 11%, 55%);
+
+  --color-site-1: hsl(193, 100%, 96%);
+  --color-site-cta: hsl(322, 100%, 66%);
+  --color-site-3: hsl(0, 0%, 100%);
+
+  --font-heading: "Poppins", sans-serif;
+  --font-body-cta: "Open Sans", sans-serif;
+}
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.Card {
+  text-align: center;
+  padding: 2rem;
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 3rem;
+  box-shadow: 1px 1px 10px var(--color-brand-2);
+}
+
+.Card-TxtBox-Title {
+  font-size: 2.5rem;
+  text-transform: capitalize;
+  font-family: var(--font-heading);
+  color: var(--color-brand-1);
+  margin-bottom: 1.5rem;
+}
+
+.Card-TxtBox-Para {
+  font-size: 1.6rem;
+  color: var(--color-brand-2);
+  font-family: var(--font-body-cta);
+}
+
+.Card-Img {
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .Card {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    justify-content: center;
+    grid-auto-flow: dense;
+    gap: 3rem;
+  }
+
+  .Card:nth-of-type(2) .Card-Img {
+    grid-column: 1;
+  }
+
+  .Card:nth-of-type(2) .Card-TxtBox {
+    grid-column: 2;
+  }
+
+  .Card-Img {
+    grid-column: 2;
+  }
+
+  .Card-TxtBox {
+    text-align: left;
+    grid-column: 1;
+  }
+
+  .Card-TxtBox-Title {
+    font-size: 3.5rem;
+  }
+}

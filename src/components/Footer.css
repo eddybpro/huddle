@@ -1,0 +1,158 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Poppins:wght@600&display=swap");
+
+:root {
+  --color-brand-1: hsl(192, 100%, 9%);
+  --color-brand-2: hsl(208, 11%, 55%);
+
+  --color-site-1: hsl(193, 100%, 96%);
+  --color-site-cta: hsl(322, 100%, 66%);
+  --color-site-3: hsl(0, 0%, 100%);
+
+  --font-heading: "Poppins", sans-serif;
+  --font-body-cta: "Open Sans", sans-serif;
+}
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+ul {
+  list-style: none;
+}
+
+footer {
+  width: 100%;
+  padding: 12rem 2rem 4rem;
+  background-color: var(--color-brand-1);
+}
+
+.FooterLogo {
+  display: block;
+  width: 14rem;
+  margin-bottom: 3rem;
+}
+
+.FooterLogo > img {
+  width: 100%;
+  filter: invert(100%) sepia(94%) saturate(0%) hue-rotate(248deg)
+    brightness(106%) contrast(106%);
+}
+
+.FooterWrapper-address-box {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.FooterWrapper-address-box > img {
+  width: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+.FooterWrapper-address-box > p {
+  font-size: 1.6rem;
+  font-family: var(--font-body-cta);
+  color: var(--color-site-3);
+  font-style: normal;
+}
+
+ul > li > a {
+  display: block;
+  padding: 1rem 0;
+  font-size: 1.6rem;
+  color: var(--color-site-3);
+  text-transform: capitalize;
+  font-family: var(--font-body-cta);
+  text-decoration: none;
+  width: fit-content;
+  transition: all 0.2s ease-in-out;
+}
+
+ul > li > a:hover {
+  text-decoration: underline;
+}
+
+.FooterWrapper-SocialIcons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.FooterWrapper-SocialIcons > li > a {
+  display: grid;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  border: 1px solid var(--color-site-3);
+  place-items: center;
+  transition: all 0.2s ease-in-out;
+}
+
+.FooterWrapper-SocialIcons > li > a:hover {
+  border-color: var(--color-site-cta);
+}
+
+.socialIcon {
+  font-size: 3rem;
+  transition: all 0.2s ease-in-out;
+}
+
+.socialIcon:hover {
+  color: var(--color-site-cta);
+}
+
+.Copyright-Para {
+  color: var(--color-site-3);
+  font-size: 1.6rem;
+  font-family: var(--font-body-cta);
+  text-align: center;
+}
+
+@media screen and (min-width: 700px) {
+  .FooterWrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 3rem;
+    margin-bottom: 4rem;
+  }
+
+  .FooterWrapper > ul:first-of-type {
+    margin-left: auto;
+  }
+
+  .FooterWrapper-SocialIcons {
+    margin-left: auto;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .FooterLogo {
+    width: 18rem;
+  }
+
+  .FooterWrapper {
+    display: grid;
+    grid-template-columns: 1.25fr 0.75fr 0.75fr 1fr;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 4rem;
+  }
+
+  .Copyright-Para {
+    text-align: right;
+  }
+}

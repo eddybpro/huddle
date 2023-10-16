@@ -1,0 +1,105 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Poppins:wght@600&display=swap");
+
+:root {
+  --color-brand-1: hsl(192, 100%, 9%);
+  --color-brand-2: hsl(208, 11%, 55%);
+
+  --color-site-1: hsl(193, 100%, 96%);
+  --color-site-cta: hsl(322, 100%, 66%);
+  --color-site-3: hsl(0, 0%, 100%);
+
+  --font-heading: "Poppins", sans-serif;
+  --font-body-cta: "Open Sans", sans-serif;
+}
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+header {
+  padding: 3rem 2rem;
+  background: url("../assets/bg-hero-mobile.svg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: var(--color-site-1);
+  text-align: center;
+}
+
+.HeaderWrapper-TxtBox-Title {
+  font-size: 3rem;
+  font-family: var(--font-heading);
+  margin-bottom: 2rem;
+  color: var(--color-brand-1);
+}
+
+.HeaderWrapper-TxtBox-Para {
+  color: var(--color-brand-2);
+  font-size: 1.6rem;
+  font-family: var(--font-body-cta);
+  margin-bottom: 2rem;
+}
+
+.HeaderWrapper-TxtBox-Btn {
+  cursor: pointer;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 1.5rem;
+  margin-bottom: 2rem;
+  font-size: 1.6rem;
+  font-family: var(--font-body-cta);
+  background-color: var(--color-site-cta);
+  color: var(--color-site-1);
+  text-transform: capitalize;
+  width: 80%;
+  font-weight: 700;
+  transition: all 0.2s ease-in-out;
+}
+
+.HeaderWrapper-TxtBox-Btn:hover {
+  opacity: 0.8;
+}
+
+.HeaderWrapper-ImgBox,
+.HeaderWrapper-ImgBox > img {
+  width: 100%;
+}
+
+@media screen and (min-width: 700px) {
+  header {
+    padding: 3rem 2rem;
+    background: url("../assets/bg-hero-desktop.svg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: var(--color-site-1);
+    text-align: center;
+  }
+
+  .HeaderWrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    text-align: left;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .HeaderWrapper-TxtBox-Title {
+    font-size: 5rem;
+  }
+
+  .HeaderWrapper-TxtBox-Btn {
+    max-width: 30rem;
+  }
+}
